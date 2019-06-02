@@ -10,8 +10,8 @@
 |image|string|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :group
-- belongs_to :user
+belongs_to :group
+belongs_to :user
 
 
 
@@ -22,8 +22,8 @@
 |name|string|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :groups
-- belongs_to :messages
+belongs_to :groups
+belongs_to :messages
 
 
 
@@ -34,8 +34,8 @@
 |name|string|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :messages
-- belongs_to :users
+belongs_to :messages
+belongs_to :users
 
 
 
@@ -47,5 +47,5 @@
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :group
-- belongs_to :user
+belongs_to :group
+belongs_to :user
