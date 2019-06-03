@@ -3,15 +3,13 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|date|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-|body|text|null: false, foreign_key: true|
-|image|string|null: false, foreign_key: true|
+|group_id|integer|foreign_key: true|
+|body|text||
+|image|string||
 
 ### Association
-- belongs_to :group
-- belongs_to :user
+belongs_to :group
+belongs_to :user
 
 
 
@@ -22,20 +20,19 @@
 |name|string|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :groups
-- belongs_to :messages
+belongs_to :groups
+belongs_to :messages
 
 
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_id|integer|null: false, foreign_key: true|
 |name|string|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :messages
-- belongs_to :users
+belongs_to :messages
+belongs_to :users
 
 
 
@@ -47,5 +44,5 @@
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :group
-- belongs_to :user
+belongs_to :group
+belongs_to :user
