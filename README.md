@@ -32,8 +32,6 @@ belongs_to :messages
 
 ### Association
 has many :messages
-belongs_to :users
-
 
 
 ## 中間テーブル
