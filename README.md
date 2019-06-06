@@ -3,7 +3,7 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_id|integer|foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 |body|text||
 |image|string||
@@ -20,7 +20,7 @@ belongs_to :user
 |name|string|null: false|
 
 ### Association
-has many :groups
+has many :groups, through: :members
 has many :messages
 
 
@@ -32,7 +32,9 @@ has many :messages
 
 ### Association
 has many :messages
-has many :users
+has many :users, through: :members
+
+
 
 ## 中間テーブル
 ## membersテーブル
