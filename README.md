@@ -44,5 +44,5 @@ has many :users, through: :members
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-belongs_to :group
-belongs_to :user
+belongs_to :group, :through => :user
+belongs_to :user, :through => :group
