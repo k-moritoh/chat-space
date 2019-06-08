@@ -17,12 +17,12 @@ belongs_to :user
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false, index: true|
 
 ### Association
 has many :groups, through: :members
 has many :messages
-
+has_many :members
 
 
 ## groupsテーブル
@@ -33,7 +33,7 @@ has many :messages
 ### Association
 has many :messages
 has many :users, through: :members
-
+has_many :members
 
 
 ## 中間テーブル
@@ -44,5 +44,5 @@ has many :users, through: :members
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-belongs_to :group, :through => :user
-belongs_to :user, :through => :group
+belongs_to :group
+belongs_to :user
